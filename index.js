@@ -10,6 +10,7 @@
  const title = $('.title')
  const bubblesElement = $('.bubbles')
  const timer = $('#timer')
+ const clickBtn = $('.click-me')
 
  const cake = $('.cake')
 
@@ -103,13 +104,26 @@ const disAppear = (el)=>{
   el.style.animation = 'disappear 1s forwards'
 }
 
+const playMusic =  ()=>{
+  const audio = document.getElementById('myAudio')
+  audio.play()
+  showLights()
+  createBubbles()
+  title.style.animation = 'title-animation 3s ease  forwards'
+  blowButton.style.animation = 'start-appear 1s ease 5s forwards, pulse 3s ease infinite'
+  cake.style.animation = 'start-appear 1s 4s ease forwards'
+  clickBtn.style.display='none'
+}
+
   window.onload = function() {
     // Set the countdown time (in seconds)
-    const countdownTime = 3; // Example: 1 hour countdown (3600 seconds)
+    const countdownTime = 5; // Example: 1 hour countdown (3600 seconds)
     
     // Initial call to set the timer display
-    countdown(countdownTime).then(showLights).then(createBubbles)
+    countdown(countdownTime)
 };
+
+
 
 // function randomInRange(min, max) {
 //   return Math.random() * (max - min) + min;
@@ -170,4 +184,5 @@ const blow = async()=>{
 }
 
 blowButton.addEventListener('click',blow)
+clickBtn.addEventListener('click',playMusic)
 

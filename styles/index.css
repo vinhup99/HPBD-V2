@@ -14,6 +14,28 @@
     background: linear-gradient(to right, #FFBE98, #FFFFFF);
 }
 
+.click-me {
+    animation: title-animation 3s ease 7.5s forwards, pulse 3s ease 6s infinite;
+    border: 1px solid #FF8F00;
+    transform: translateY(100vh) scale(0.5);
+    opacity: 0;
+    background: #FABC3F;
+    position: relative;
+    border-radius: 120px;
+    padding: 10px 55px;
+    color: #FF8F00;
+    top: -94px;
+    font-size: 48px;
+    transition: 0.3s;
+    z-index: 88;
+}
+
+.click-me:hover {
+    background: rgba(250, 188, 63, 0.5) ;
+    color: #FFC96F;
+    cursor: pointer;
+}
+
 .happy-birth-day {
 justify-content: space-around;
 transition: 1s;
@@ -69,7 +91,6 @@ overflow: hidden;
     text-shadow: 8px 2px;
     letter-spacing: 10px;
     font-style: oblique;
-    animation: title-animation 3s ease 7.5s forwards;
     transform: translateY(100vh) scale(0.5);
 }
 
@@ -219,7 +240,7 @@ overflow: hidden;
 /* cake */
 .cake {
     position: absolute;
-    animation: start-appear 1s ease 8s forwards;
+    /* animation: start-appear 1s ease 8s forwards; */
     height: 75%;
     z-index: 3;
     bottom: 0;
@@ -456,7 +477,7 @@ overflow: hidden;
 }
 /* blow button */
 .blow {
-    animation:  start-appear 1s ease 8s forwards, pulse 3s ease infinite;
+    /* animation:  start-appear 1s ease 8s forwards, pulse 3s ease infinite; */
     background-color: #FFF8E8;
     border: 1px solid #FF885B;
     transition: all 0.3s;
